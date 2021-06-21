@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Math Operations</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <center>
+      <table>
+        <tr>
+          <td>
+            <form>
+              <input id="miles" type="text" placeholder="mi" />
+            </form>
+          </td>
+          <td>
+            <button type="button" onclick="convertkm()">--></button>
+          </td>
+          <td><span id="result1">km</span></td>
+        </tr>
+        <tr>
+          <td>
+            <form>
+              <input id="feet" type="text" placeholder="ft" />
+            </form>
+          </td>
+          <td>
+            <button type="button" onclick="convertm()">--></button>
+          </td>
+          <td><span id="result2">m</span></td>
+        </tr>
+        <tr>
+          <td>
+            <form>
+              <input id="inches" type="text" placeholder="in" />
+            </form>
+          </td>
+          <td>
+            <button type="button" onclick="convertcm()">--></button>
+          </td>
+          <td><span id="result3">cm</span></td>
+        </tr>
+      </table>
+    </center>
+
+    <script>
+      function convertkm() {
+        var num1 = Number(document.getElementById("miles").value);
+        var total = num1 * 1.6;
+        document.getElementById("result1").innerHTML = total + " km";
+      }
+      function convertm() {
+        num1 = document.getElementById("feet").value;
+        var total = num1 * 3.28;
+        document.getElementById("result2").innerHTML = total + " m";
+      }
+      function convertcm() {
+        num1 = document.getElementById("inches").value;
+        var total = num1 * 2.54;
+        document.getElementById("result3").innerHTML = total + " cm";
+      }
+    </script>
+  </body>
+</html>
